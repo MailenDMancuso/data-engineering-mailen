@@ -8,6 +8,7 @@ WHERE nombre_evento like 'D%' or nombre_evento like 'A%'
 GROUP BY decade;
 
 -- Cual es el numero promedio de dias restantes hasta los eventos apocalipticos en cada decada 
+
 SELECT
 	extract(decade from fecha_evento) as decade,
 	AVG(fecha_evento - CURRENT_DATE) as diferencia_dias_promedio
